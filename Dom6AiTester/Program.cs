@@ -12,6 +12,11 @@ string aiModToTest = "A\\mar.dm";
 // AIs to spawn in
 int[] AiNations = { 95, 103};
 
+int level1thrones = 2;
+int level2thrones = 0;
+int level3thrones = 0;
+
+int requiredAscenscionPoints = 2;
 
 Process serverProcess = new Process();
 Process clientProcess = new Process();
@@ -26,7 +31,7 @@ foreach (int nr in AiNations)
     serverProcess.StartInfo.Arguments += $"--normai {nr} ";
 }
 
-serverProcess.StartInfo.Arguments += $"--mapfile {map} --thrones 2 0 0 --requiredap 2 {gameName}";
+serverProcess.StartInfo.Arguments += $"--mapfile {map} --thrones {level1thrones} {level2thrones} {level3thrones} --requiredap {requiredAscenscionPoints} {gameName}";
 serverProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
 serverProcess.Start();
 
