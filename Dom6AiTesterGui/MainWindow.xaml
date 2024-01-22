@@ -1,0 +1,72 @@
+﻿<Window x:Class="Dom6AiTesterGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dom6AiTesterGui" d:DataContext="{d:DesignInstance Type=local:Data}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <StackPanel>
+        <GroupBox Tag="Test">
+            <GroupBox.Header>
+                <Label>Notes:</Label>
+            </GroupBox.Header>
+            <TextBlock IsEnabled="False" Margin="5">
+                - You need to have te Omniscience mod installed (From steam Workshop) located in: <LineBreak/>
+                C:\Program Files (x86)\Steam\steamapps\workshop\content\2511500\3140298160 <LineBreak/>
+                and copy it to %appdata%/Dominions6/mods/3140298160/LA_Omniscience_v1_00.dm <LineBreak/>
+                <LineBreak/>
+                - You need to Manually create a map that supports the amount of AIs you select and it must have a UnderWater spawn for the Omniscience <LineBreak/>
+            </TextBlock>
+        </GroupBox>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Padding="5px">Dom6 exe location:</Label>
+            <TextBox Grid.Column="1" IsReadOnly="True" Text="{Binding Path=Dom6ExeLocation }" Margin="5"/>
+            <Button Grid.Column="2" x:Name="SelectDomExe" Click="SelectDomExe_Click" Margin="5" MaxWidth="100">Select</Button>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Padding="5px">Game Name:</Label>
+            <TextBox Grid.Column="1" Text="{Binding Path=GameName, Mode=TwoWay}" Margin="5"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Padding="5px">Map:</Label>
+            <TextBox Grid.Column="1" IsReadOnly="True" Text="{Binding Path=Map }" Margin="5"/>
+            <Button Grid.Column="2" x:Name="SelectMap" Click="SelectMap_Click" Margin="5" MaxWidth="100">Select</Button>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Padding="5px">Ai Mod:</Label>
+            <TextBox Grid.Column="1" IsReadOnly="True" Text="{Binding Path=AiMod }" Margin="5"/>
+            <Button Grid.Column="2" x:Name="SelectAiMod" Click="SelectAiMod_Click" Margin="5" MaxWidth="100">Select</Button>
+        </Grid>
+
+        <WrapPanel x:Name="Wrap"></WrapPanel>
+
+        <Button x:Name="StartServer" Click="StartServer_Click" Margin="5" MinHeight="35" MaxWidth="250">Start Server</Button>
+        <Button x:Name="StartClient" Click="StartClient_Click" Margin="5" MinHeight="35" MaxWidth="250">Start Client</Button>
+        <Button x:Name="StartAutoTurns" Click="StartAutoTurns_Click" Margin="5" MinHeight="35" MaxWidth="250">Start Auto Turns</Button>
+    </StackPanel>
+</Window>

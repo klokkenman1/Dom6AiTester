@@ -5,6 +5,13 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dom6AiTester", "Dom6AiTester\Dom6AiTester.csproj", "{69789AFB-E681-4ED3-B60D-75FB5AAE691D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom6AiTesterGui", "Dom6AiTesterGui\Dom6AiTesterGui.csproj", "{1DFDC1E4-CDA1-4325-8F29-27F78B8B5126}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8AD8204-CF2A-4532-A4C4-35971551F70C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{69789AFB-E681-4ED3-B60D-75FB5AAE691D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69789AFB-E681-4ED3-B60D-75FB5AAE691D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69789AFB-E681-4ED3-B60D-75FB5AAE691D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFDC1E4-CDA1-4325-8F29-27F78B8B5126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFDC1E4-CDA1-4325-8F29-27F78B8B5126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFDC1E4-CDA1-4325-8F29-27F78B8B5126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFDC1E4-CDA1-4325-8F29-27F78B8B5126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
